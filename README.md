@@ -41,7 +41,7 @@ Powerful and convenient solution for downloading music from SoundCloud and Bandc
 
 2. **Install the script**:
    
-   [![Install ytdl-scbc.user.js](https://img.shields.io/badge/Install-Tampermonkey%20Script-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/Sharaj00/ytdl-scbc/blob/main/ytdl-scbc.user.js)
+   [![Install ytdl-scbc.user.js](https://img.shields.io/badge/Install-Tampermonkey%20Script-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/Sharaj00/ytdl-scbc/main/ytdl-scbc.user.js)
    
    **Or manually:**
    - Open Tampermonkey → Create a new script
