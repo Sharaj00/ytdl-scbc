@@ -410,6 +410,7 @@ try {
     # Wait for completion and read remaining output
     $process.WaitForExit()
     $exitCode = $process.ExitCode
+    if ($null -eq $exitCode) { $exitCode = 0 }
     
     # Read final output to account for all completed downloads
     if (Test-Path $stdoutFile) {
@@ -470,7 +471,7 @@ try {
             Write-Host "`nDownloaded files:" -ForegroundColor Gray
             $script:downloadedFiles | ForEach-Object {
                 $fileName = Split-Path $_ -Leaf
-                Write-Host "  • $fileName" -ForegroundColor Gray
+                Write-Host "  - $fileName" -ForegroundColor Gray
             }
         }
     } else {
@@ -480,7 +481,7 @@ try {
         Write-Host "`nErrors: $script:errorCount" -ForegroundColor Red
         Write-Host "Error details:" -ForegroundColor Yellow
         $script:errors | Select-Object -Unique | ForEach-Object { 
-            Write-Host "  • $_" -ForegroundColor Red 
+            Write-Host "  - $_" -ForegroundColor Red 
         }
     }
     Write-Host "===========================`n" -ForegroundColor Cyan
